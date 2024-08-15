@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from streamlit_dynamic_filters import DynamicFilters
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 st.set_page_config(layout="wide")
 
@@ -25,10 +26,11 @@ def get_raw_data():
            ,'skill3_name','skill3_icon','skill3_attr','skill3_arche'
            ,'skill4_name','skill4_icon','skill4_attr','skill4_arche']
     df = pd.DataFrame(columns=col)
-    
-    with open(r'.\Data\descendant.json') as f: 
-        src = f.read()
-        data = json.loads(src)
+
+    file_path = os.getenv('DESCENDANT_JSON_PATH', 'TFD_streamlit_analysis/Data/descendant.json')
+    with open(file_path) as f:
+        data = json.load(f) 
+
         
         
     for desc in data:
