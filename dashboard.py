@@ -28,7 +28,7 @@ def get_raw_data():
            ,'skill4_name','skill4_icon','skill4_attr','skill4_arche']
     df = pd.DataFrame(columns=col)
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(script_dir, 'Data\descendant.json')
+    file_path = os.path.join(script_dir, 'Data/descendant.json')
     with open(file_path) as f:
         data = json.load(f) 
 
