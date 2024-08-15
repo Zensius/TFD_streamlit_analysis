@@ -1,0 +1,5 @@
+pandas
+json
+matplotlib
+streamlit_dynamic_filters
+plotly
