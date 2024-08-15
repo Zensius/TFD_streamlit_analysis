@@ -26,7 +26,7 @@ def get_raw_data():
            ,'skill4_name','skill4_icon','skill4_attr','skill4_arche']
     df = pd.DataFrame(columns=col)
     
-    with open(r'E:\SpyderWorkplace\TDS_database\TFD_streamlit_analysis\Data\descendant.json') as f: 
+    with open(r'\Data\descendant.json') as f: 
         src = f.read()
         data = json.loads(src)
         
