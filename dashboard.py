@@ -8,6 +8,7 @@ Created on Mon Aug 12 13:48:27 2024
 import pandas as pd
 import json
 import streamlit as st
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 from streamlit_dynamic_filters import DynamicFilters
@@ -28,7 +29,7 @@ def get_raw_data():
            ,'skill4_name','skill4_icon','skill4_attr','skill4_arche']
     df = pd.DataFrame(columns=col)
     
-    with open(r'E:\SpyderWorkplace\TDS_database\Data\descendant.json') as f: 
+    with open(r'E:\SpyderWorkplace\TDS_database\TFD_streamlit_analysis\Data\descendant.json') as f: 
         src = f.read()
         data = json.loads(src)
         
