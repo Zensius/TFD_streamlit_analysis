@@ -197,7 +197,7 @@ with stat_tab:
             
                 return fig
             fig = create_radar_chart(pivot_df[pivot_df['Descendant Name'] == option], stats, title= option)
-            st.set_option('deprecation.showPyplotGlobalUse', False)
+
             st.plotly_chart(fig)
         
     def stat_by_level_chart(result_df, desc):
