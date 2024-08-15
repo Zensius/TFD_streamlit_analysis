@@ -16,6 +16,7 @@ import os
 
 st.set_page_config(layout="wide")
 
+
 @st.cache_data
 def get_raw_data():
     #exploring descendant stats
@@ -26,8 +27,8 @@ def get_raw_data():
            ,'skill3_name','skill3_icon','skill3_attr','skill3_arche'
            ,'skill4_name','skill4_icon','skill4_attr','skill4_arche']
     df = pd.DataFrame(columns=col)
-
-    file_path = os.getenv('DESCENDANT_JSON_PATH', 'TFD_streamlit_analysis/Data/descendant.json')
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, 'Data\descendant.json')
     with open(file_path) as f:
         data = json.load(f) 
 
